@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="hw.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <script src="" async defer></script>
+  </body>
+</html>
+<body onclick="changeBackgroundColor()">
+  <h1 onclick="changedH1()">Smartphone Shop</h1>
+
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Amazon Link</th>
+    </tr>
+    <td>
+      <img
+        alt="Samsung Galaxy S22"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpAHnkWTUqMNEGYnxvElpT3tGsy_KXe_Urg&usqp=CAU"
+      />
+    </td>
+
+    <td>
+      <a href="https://www.amazon.de/adlp/samsung-galaxy-2022/"
+        >Samsung Galaxy S22</a
+      >
+    </td>
+    <td>Latest Samsung Smartphone</td>
+    <td class="price" onclick="colorChange()">1200€</td>
+
+    <br />
+
+    <tr>
+      <td>
+        <img
+          alt="Samsung Galaxy S22"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpAHnkWTUqMNEGYnxvElpT3tGsy_KXe_Urg&usqp=CAU"
+        />
+      </td>
+
+      <td>
+        <a href="https://www.amazon.de/adlp/samsung-galaxy-2022/"
+          >Samsung Galaxy S22</a
+        >
+      </td>
+      <td>Latest Samsung Smartphone</td>
+      <td class="price">1200€</td>
+    </tr>
+
+    <br />
+    <tr>
+      <td>
+        <img
+          alt="Samsung Galaxy S22"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpAHnkWTUqMNEGYnxvElpT3tGsy_KXe_Urg&usqp=CAU"
+        />
+      </td>
+
+      <td>
+        <a href="https://www.amazon.de/adlp/samsung-galaxy-2022/"
+          >Samsung Galaxy S22</a
+        >
+      </td>
+      <td>Latest Samsung Smartphone</td>
+      <td class="price">1200€</td>
+    </tr>
+
+    <br />
+    <tr>
+      <td>
+        <img
+          alt="Samsung Galaxy S22"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpAHnkWTUqMNEGYnxvElpT3tGsy_KXe_Urg&usqp=CAU"
+        />
+      </td>
+
+      <td>
+        <a href="https://www.amazon.de/adlp/samsung-galaxy-2022/"
+          >Samsung Galaxy S22</a
+        >
+      </td>
+      <td>Latest Samsung Smartphone</td>
+      <td class="price">1200€</td>
+    </tr>
+
+    <br />
+
+    <tr>
+      <td>
+        <img
+          alt="Samsung Galaxy S22"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpAHnkWTUqMNEGYnxvElpT3tGsy_KXe_Urg&usqp=CAU"
+        />
+      </td>
+
+      <td>
+        <a href="https://www.amazon.de/adlp/samsung-galaxy-2022/"
+          >Samsung Galaxy S22</a
+        >
+      </td>
+      <td>Latest Samsung Smartphone</td>
+      <td class="price">1200€</td>
+    </tr>
+  </table>
+  <textarea name="" id="" cols="30" rows="2"></textarea>
+  <input type="text" />
+  <footer>
+    <div>Smartphone Shop</div>
+    <div class="address" onclick="fakeAddress()">
+      Giesing 225, 84616, Munich Germany
+    </div>
+  </footer>
+
+  <script>
+    // ex. 7
+    const changedH1 = function () {
+      document.querySelector("h1").innerText = "change to something else";
+      console.log(changedH1);
+    };
+
+    // ex. 8
+    function randomNumber(x) {
+      let randomInt = Math.floor(Math.random() * x);
+      return randomInt;
+    }
+
+    const changeBackgroundColor = function () {
+      const body = document.querySelector("body");
+      let red = randomNumber(255);
+      let green = randomNumber(255);
+      let blue = randomNumber(255);
+      body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    };
+
+    // ex. 9
+    const fakeAddress = function () {
+      document.querySelector("div.address").innerText = "FAKE ADDRESS";
+      console.log(fakeAddress);
+    };
+
+    // ex 10
+    let aTags = document.querySelectorAll("a");
+    aTags.classList.add("newLink");
+
+    const addClassToLinks = function () {
+      let aTags = document.querySelectorAll("a");
+      for (let i = 0; i < aTags.length; i++) {
+        aTags[i].classList.add("newLink");
+      }
+    };
+    console.log(addClassToLinks);
+
+    // ex. 11
+    const toggleImagesClass = function () {
+      let images = document.querySelectorAll("img");
+      for (let i = 0; i < images.length; i++) {
+        const singleImg = images[i];
+        singleImg.classList.toggle("hidden");
+      }
+    };
+    console.log(toggleImagesClass);
+
+    // ex. 12
+
+    const colorChange = function () {
+      const priceTags = document.querySelectorAll("td.price");
+      let red = randomNumber(255);
+      let green = randomNumber(255);
+      let blue = randomNumber(255);
+      priceTags.style.color = `rgb(${red},${green},${blue})`;
+    };
+    console.log(colorChange);
+
+    // const changeColor
+
+    // for(let i = 0; i < priceTags.length;i++){
+    //     if const changeColor = priceTags[i].push(colorChange){
+    //         priceTags = changeColor
+    //     }
+
+    // }
+    // aTags.classList.add("sdsa");
+    // console.log({ document }, {});
+  </script>
+</body>
